@@ -4,11 +4,14 @@ import static java.lang.Integer.*;
 public class fredagmodul4 {
 
 	public static void main(String[] args) {
-		String karTxt = showInputDialog("Tallkarakter");
-		int tallkarakter = parseInt(karTxt);
-		String karakter;
-		int karaktertall= 0;
-		
+			
+		for(int i = 0; i <= 9; i++) {
+			String karTxt = showInputDialog("Tallkarakter");
+			int tallkarakter = parseInt(karTxt);
+			String karakter;
+			int karaktertall= 0;
+			
+		if(tallkarakter >=0 && tallkarakter <=100 ) {	
 		if (tallkarakter >= 90 && tallkarakter <= 100) {
 			karaktertall= 6;
 		}
@@ -27,7 +30,7 @@ public class fredagmodul4 {
 		if (tallkarakter >= 0 && tallkarakter <= 39) {
 			karaktertall= 1;
 		}
-		
+	
 		
 		
 		switch (karaktertall) {
@@ -40,7 +43,10 @@ public class fredagmodul4 {
 		default: karakter = "ugyldig karakter";
 		}
 		showMessageDialog(null, karakter);
-
+		}else {
+			i--;
+		}
+	}
 	}
 
 }
